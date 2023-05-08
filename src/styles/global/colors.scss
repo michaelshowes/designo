@@ -1,0 +1,18 @@
+$colors: (
+	gray: (
+		100: #f1f3f5,
+		200: #333136
+	),
+	peach: (
+		100: #ffad9b,
+		200: #e7816b
+	)
+);
+
+$accent: #a445ed;
+$error: #ff5252;
+
+// FUNCTION
+@function color($color, $tone: 1) {
+	@return map-get(map-get($colors, $color), $tone);
+}

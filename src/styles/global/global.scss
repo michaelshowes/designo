@@ -1,0 +1,46 @@
+@use './settings.scss' as *;
+@use './colors.scss' as *;
+@use '../mixins' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+}
+
+body {
+	-webkit-backface-visibility: hidden;
+	position: relative;
+	min-height: 100vh;
+	font-size: 100%;
+	line-height: 26px;
+	text-rendering: optimizeSpeed;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
