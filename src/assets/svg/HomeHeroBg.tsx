@@ -14,13 +14,13 @@ export default function HomeHeroBg() {
 					id='a'
 				>
 					<stop
-						stop-color='#5D0202'
-						stop-opacity='0'
+						stopColor='#5D0202'
+						stopOpacity='0'
 						offset='0%'
 					/>
 					<stop
-						stop-color='#5D0202'
-						stop-opacity='.498'
+						stopColor='#5D0202'
+						stopOpacity='.498'
 						offset='100%'
 					/>
 				</linearGradient>
@@ -31,7 +31,7 @@ export default function HomeHeroBg() {
 				cx='320'
 				cy='320'
 				r='320'
-				fill-rule='evenodd'
+				fillRule='evenodd'
 				opacity='.309'
 			/>
 		</svg>

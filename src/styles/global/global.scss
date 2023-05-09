@@ -27,6 +27,7 @@ body {
 	font-size: 100%;
 	line-height: 26px;
 	text-rendering: optimizeSpeed;
+	padding: 0 24px;
 	// background-color: color(peach, 200);
 
 	@include from($tablet) {

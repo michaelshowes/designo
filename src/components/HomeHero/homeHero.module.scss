@@ -2,11 +2,13 @@
 	position: relative;
 	background-color: color(peach, 200);
 	height: 845px;
+	margin: 0 -24px;
 	isolation: isolate;
 	overflow: hidden;
 
 	@include from($tablet) {
 		border-radius: 15px;
+		margin: 0;
 	}
 
 	@include from($desktop) {
