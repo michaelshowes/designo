@@ -1,5 +1,7 @@
 import { Jost } from 'next/font/google';
 import '@styles/main.scss';
+import Header from '@components/Header/Header';
+import Container from '@layout/Container/Container';
 
 const jost = Jost({
 	subsets: ['latin'],
@@ -18,7 +20,12 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body className={jost.className}>{children}</body>
+			<body className={jost.className}>
+				<Container>
+					<Header />
+					<main>{children}</main>
+				</Container>
+			</body>
 		</html>
 	);
 }
