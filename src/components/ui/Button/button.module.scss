@@ -1,0 +1,30 @@
+.button {
+	font-size: 0.9375rem;
+	font-weight: 500;
+	line-height: 22px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-family: inherit;
+	padding: 16px 25px;
+	border-radius: 8px;
+	transition: background-color 0.15s ease-in-out;
+
+	&.dark {
+		color: white;
+		background-color: color(peach, 200);
+
+		&:hover {
+			background-color: color(peach, 100);
+		}
+	}
+
+	&.light {
+		color: black;
+		background-color: white;
+
+		&:hover {
+			color: white;
+			background-color: color(peach, 100);
+		}
+	}
+}

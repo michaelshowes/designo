@@ -1,0 +1,58 @@
+.input {
+	position: relative;
+
+	input,
+	textarea {
+		display: block;
+		background: none;
+		color: white;
+		font-family: inherit;
+		font-size: 0.9375rem;
+		font-weight: 500;
+		line-height: 26px;
+		width: 100%;
+		border: 0;
+		padding: 0 16px 12px;
+		box-shadow: 0 1px 0 0 white;
+		transition: 0.15s ease-in-out;
+		margin-bottom: 24px;
+		resize: none;
+
+		&::placeholder {
+			color: rgba(white, 0.5);
+		}
+
+		&:not(:placeholder-shown) {
+			box-shadow: 0 3px 0 0 white;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&:invalid {
+			+ .errorMsg {
+				display: flex;
+			}
+		}
+	}
+
+	.errorMsg {
+		position: absolute;
+		top: 0;
+		right: 8px;
+		display: none;
+		align-items: center;
+		gap: 8px;
+		color: white;
+		font-size: 0.75rem;
+		line-height: 26px;
+		font-style: italic;
+	}
+
+	&:invalid {
+		.errorMsg {
+			display: flex;
+		}
+	}
+}

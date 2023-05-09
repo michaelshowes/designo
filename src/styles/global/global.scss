@@ -22,18 +22,22 @@ html {
 }
 
 body {
-	-webkit-backface-visibility: hidden;
 	position: relative;
 	min-height: 100vh;
 	font-size: 100%;
 	line-height: 26px;
 	text-rendering: optimizeSpeed;
+	// background-color: color(peach, 200);
+
+	@include from($tablet) {
+		padding: 0 40px;
+	}
 }
 
 button {
 	cursor: pointer;
-	border: none;
 	background: none;
+	border: none;
 }
 
 a {
