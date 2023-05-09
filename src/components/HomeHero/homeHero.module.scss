@@ -13,6 +13,22 @@
 		height: unset;
 	}
 
+	svg {
+		position: absolute;
+		top: 50%;
+		right: -267px;
+		transform: translateY(-50%);
+		z-index: -20;
+
+		@include from($tablet) {
+			right: -10%;
+		}
+
+		@include from($desktop) {
+			right: 0;
+		}
+	}
+
 	.inner {
 		color: white;
 		text-align: center;
