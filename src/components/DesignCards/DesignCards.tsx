@@ -1,11 +1,8 @@
-'use client';
-
 import Heading from '@components/ui/Heading/Heading';
 import scss from './designCards.module.scss';
 import Link from 'next/link';
 import RightArrowIcon from '@assets/svg/RightArrowIcon';
 import Image from 'next/image';
-import useMedia from '@hooks/useMedia';
 import cx from 'classnames';
 
 type CardProps = {
@@ -26,7 +23,6 @@ type CardProps = {
 
 function Card({ data, count }: CardProps) {
 	const { name, url, image } = data;
-	const { isMobile, isTablet, isDesktop } = useMedia();
 
 	return (
 		<Link

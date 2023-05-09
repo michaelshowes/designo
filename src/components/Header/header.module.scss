@@ -21,7 +21,7 @@
 		}
 	}
 
-	.image {
+	.logo {
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -45,8 +45,11 @@
 
 			li {
 				a {
+					text-decoration: underline;
+					text-decoration-color: rgba(color(gray, 300), 0);
+					transition: 0.3s ease-in-out;
 					&:hover {
-						color: color(peach, 200);
+						text-decoration-color: rgba(color(gray, 300), 1);
 					}
 				}
 			}

@@ -8,21 +8,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import CloseIcon from '@assets/svg/CloseIcon';
 import cx from 'classnames';
-
-const routes = [
-	{
-		name: 'Our Company',
-		path: '/our-company'
-	},
-	{
-		name: 'Locations',
-		path: '/locations'
-	},
-	{
-		name: 'Contact',
-		path: '/contact'
-	}
-];
+import { header as routes } from '@api/header';
 
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +18,7 @@ export default function Header() {
 			<div className={scss.inner}>
 				<Link
 					href='/'
-					className={scss.image}
+					className={scss.logo}
 				>
 					<Image
 						src={logo}

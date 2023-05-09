@@ -1,0 +1,214 @@
+.footer {
+	background-color: color(gray, 300);
+	color: white;
+	margin: 0 -24px;
+
+	@include from($tablet) {
+		margin: 0 -40px;
+	}
+
+	.inner {
+		padding: 64px 24px;
+
+		@include from($tablet) {
+			padding: 80px 40px;
+		}
+
+		@include from($desktop) {
+			padding: 72px 40px;
+		}
+	}
+
+	.upper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include from($tablet) {
+			flex-direction: row;
+			justify-content: space-between;
+			border-bottom: 1px solid rgba(white, 0.1);
+			padding-bottom: 32px;
+			margin-bottom: 32px;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			margin-bottom: 32px;
+			border-bottom: 1px solid rgba(white, 0.1);
+
+			@include from($tablet) {
+				width: unset;
+				flex-direction: row;
+				justify-content: space-between;
+				margin: 0;
+				border: 0;
+			}
+
+			a {
+				display: flex;
+				align-items: center;
+				margin-bottom: 20px;
+
+				@include from($tablet) {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.footerMenu {
+			font-size: 0.875rem;
+			line-height: 14px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			margin-bottom: 40px;
+
+			@include from($tablet) {
+				margin-bottom: 0;
+			}
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 32px;
+
+				@include from($tablet) {
+					flex-direction: row;
+					gap: 42px;
+				}
+
+				li {
+					a {
+						text-decoration: underline;
+						text-decoration-color: rgba(white, 0);
+						transition: 0.3s ease-in-out;
+						&:hover {
+							text-decoration-color: rgba(white, 1);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.lower {
+		@include from($tablet) {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+
+		.contact,
+		.address {
+			color: rgba(white, 0.5);
+			text-align: center;
+			margin-bottom: 40px;
+
+			@include from($tablet) {
+				text-align: left;
+				margin-bottom: 0;
+			}
+
+			.title,
+			.name {
+				font-weight: 700;
+			}
+		}
+
+		.socials {
+			display: flex;
+			justify-content: center;
+			gap: 16px;
+
+			li {
+				a {
+					svg {
+						path {
+							transition: 0.2s ease-in-out;
+						}
+					}
+
+					&:hover {
+						svg {
+							path {
+								fill: color(peach, 100);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.cta {
+	position: relative;
+	color: white;
+	padding: 0 24px;
+	margin: 0 -24px;
+	isolation: isolate;
+
+	@include from($tablet) {
+		padding: 0 40px;
+		margin: 0 -40px;
+	}
+
+	.bg {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: color(gray, 300);
+		height: 190px;
+		z-index: -1;
+	}
+
+	.ctaInner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: color(peach, 200);
+		text-align: center;
+		padding: 64px 24px;
+		border-radius: 15px;
+
+		@include from($desktop) {
+			flex-direction: row;
+			justify-content: space-between;
+			text-align: left;
+			padding: 72px 95px;
+		}
+
+		h2 {
+			font-size: 32px;
+			max-width: 335px;
+			margin: 0 auto 20px;
+
+			@include from($tablet) {
+				font-size: 2.5rem;
+			}
+
+			@include from($desktop) {
+				text-align: left;
+				margin: 0 0 20px;
+			}
+		}
+
+		p {
+			font-size: 15px;
+			max-width: 440px;
+			margin-bottom: 32px;
+
+			@include from($tablet) {
+				font-size: 1rem;
+			}
+		}
+
+		a {
+			align-self: center;
+		}
+	}
+}

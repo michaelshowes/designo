@@ -10,7 +10,8 @@ export default function Stack({ children, gap }: StackProps) {
 		<div
 			className={scss.stack}
 			style={{
-				gap: gap
+				gap: gap,
+				marginBottom: gap
 			}}
 		>
 			{children}
